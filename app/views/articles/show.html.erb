@@ -1,0 +1,14 @@
+<h1><%= @article.title %><small style="font-size: 20px; margin-left: 5px"><%= link_to edit_article_path(@article) do %>
+<i class="fa-solid fa-file-pen"></i>
+<% end %>
+<%= link_to article_path(@article),
+  data: {turbo_method: :delete, turbo_confirm: "Do you want ot delete this article?"} do %>
+  <i class="fa-solid fa-trash"></i>
+  <% end %>
+</small></h1>
+
+<hr>
+<h4><%= @article.author %></h4>
+<p><%= @article.content %></p>
+
+<%# <%= link_to "Go back", root_path %>
